@@ -16,7 +16,7 @@ public:
     Point(double x, double y): _x(x), _y(y) {};
     Point(const Point& point): _x(point._x), _y(point._y) {};
 
-    auto operator<=>(const Point& point) const = default;
+    bool operator==(const Point& point) const = default;
 
     double getX() const;
     double getY() const;
