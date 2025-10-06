@@ -2,6 +2,7 @@
 #define GEOMETRY_STRAIGHT_TRIANGLE_PRISM
 
 #include "cylinder.hpp"
+#include "utility.hpp"
 #include "point.hpp"
 
 namespace geometry {

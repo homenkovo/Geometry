@@ -3,6 +3,7 @@
 
 #include "straight_triangular_prism.hpp"
 #include "point.hpp"
+#include "utility.hpp"
 
 namespace geometry {
     class StraightQuadrilateralPrism;

@@ -33,6 +33,8 @@ public:
     geometry::Point operator+(const Point& point) const;
     geometry::Point operator-(const Point& point) const;
 
+    double operator*(const Point& point) const;
+
     double sqr() const;
     double length() const;
 

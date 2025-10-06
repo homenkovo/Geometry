@@ -1,15 +1,11 @@
 #include <iostream>
 
-#include "geometry/point.hpp"
+#include "geometry/straight_quadrilateral_prism.hpp"
 
 int main() {
-    geometry::Point a, b;
-    std::cin >> a >> b;
+    geometry::StraightQuadrilateralPrism prism({0, 0}, {1, 0}, {1, 1}, {0, 1}, 1);
 
-    std::cout << a << std::endl
-              << b << std::endl;
-    
-    std::cout << (a - b).length() << std::endl;
+    std::cout << prism.volume() << std::endl;
 
     return 0;
 }

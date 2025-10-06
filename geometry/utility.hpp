@@ -1,6 +1,10 @@
 #ifndef GEOMETRY_UTILITY_HPP
 #define GEOMETRY_UTILITY_HPP
 
+#ifndef GEOMETRY_EPSILON
+#   define GEOMETRY_EPSILON 1e-7
+#endif
+
 #include "point.hpp"
 
 #include <cmath>

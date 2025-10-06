@@ -49,9 +49,14 @@ geometry::Point geometry::Point::operator-(const Point& point) const {
     return +*this -= point;
 }
 
-double geometry::Point::sqr() const {
-    return this->_x * this->_x + this->_y * this->_y;
+double geometry::Point::operator*(const Point& point) const {
+    return this->_x * point._x + this->_y * point._y;
 }
+
+double geometry::Point::sqr() const {
+    return *this * *this;
+}
+
 double geometry::Point::length() const {
     return std::sqrt(this->sqr());
 }

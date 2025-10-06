@@ -1,5 +1,4 @@
 #include "straight_triangular_prism.hpp"
-#include "utility.hpp"
 
 const geometry::Point& geometry::StraightTrianglePrism::getThird() const {
     return this->_third;

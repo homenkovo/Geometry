@@ -1,5 +1,4 @@
 #include "straight_quadrilateral_prism.hpp"
-#include "utility.hpp"
 
 const geometry::Point& geometry::StraightQuadrilateralPrism::getFourth() const {
     return this->_fourth;
@@ -18,15 +17,15 @@ double geometry::StraightQuadrilateralPrism::baseLength() const {
 }
 
 bool geometry::StraightQuadrilateralPrism::isParallelepiped() const {
-
+    return std::abs(((this->_center - this->_point) + (this->_third - this->_fourth)).length()) < GEOMETRY_EPSILON;
 }
 
 bool geometry::StraightQuadrilateralPrism::isRectangularParallelepiped() const {
-
+    return this->isParallelepiped() && std::abs((this->_center - this->_point) * (this->_point - this->_third)) < GEOMETRY_EPSILON && std::abs(((this->_point - this->_third) * (this->_third - this->_fourth)) < GEOMETRY_EPSILON);
 }
 
 bool geometry::StraightQuadrilateralPrism::isQube() const {
-
+    return this->isRectangularParallelepiped() && std::abs((this->_center - this->_point).length() - this->_h) < GEOMETRY_EPSILON && std::abs((this->_point - this->_third).length() - this->_h) < GEOMETRY_EPSILON;
 }
 
 std::ostream& geometry::operator<<(std::ostream& out, const geometry::StraightQuadrilateralPrism& straightQuadrilateralPrism) {

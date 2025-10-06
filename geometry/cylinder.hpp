@@ -26,8 +26,8 @@ public:
     void setPoint(const geometry::Point& point);
     void setHeight(double h);
 
-    double baseSquare() const;
-    double baseLength() const;
+    virtual double baseSquare() const;
+    virtual double baseLength() const;
     double volume() const;
     double sideSurfaceArea() const;
 
