@@ -18,6 +18,8 @@ public:
     StraightQuadrilateralPrism(const geometry::Point& center, const geometry::Point& second, const geometry::Point& third, const geometry::Point& fourth, double h): StraightTrianglePrism(center, second, third, h), _fourth(fourth) {}
     StraightQuadrilateralPrism(const StraightQuadrilateralPrism& straightQuadrilateralPrism): StraightTrianglePrism(straightQuadrilateralPrism._center, straightQuadrilateralPrism._point, straightQuadrilateralPrism._third, straightQuadrilateralPrism._h), _fourth(straightQuadrilateralPrism._fourth) {}
 
+    constexpr geometry::StraightQuadrilateralPrism& operator=(const geometry::StraightQuadrilateralPrism&) = default;
+
     const geometry::Point& getFourth() const;
     void setFourth(const geometry::Point& fourth);
     

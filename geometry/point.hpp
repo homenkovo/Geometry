@@ -16,6 +16,8 @@ public:
     Point(double x, double y): _x(x), _y(y) {};
     Point(const Point& point): _x(point._x), _y(point._y) {};
 
+    constexpr geometry::Point& operator=(const geometry::Point&) = default;
+
     bool operator==(const Point& point) const = default;
 
     double getX() const;

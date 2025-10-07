@@ -3,7 +3,7 @@ all:
 	rm build/*.a
 
 	@cd build
-	g++ -std=c++23 -c ../geometry/*.cpp
+	g++ -std=c++23 -O2 -Wall -Wextra -Wpedantic -c ../geometry/*.cpp
 	@cd ..
 
 	ar r build/libgeometry.a build/*.o

@@ -17,7 +17,7 @@ double geometry::StraightQuadrilateralPrism::baseLength() const {
 }
 
 bool geometry::StraightQuadrilateralPrism::isParallelepiped() const {
-    return std::abs(((this->_center - this->_point) + (this->_third - this->_fourth)).length()) < GEOMETRY_EPSILON;
+    return std::abs(((this->_center - this->_point) + (this->_third - this->_fourth)).length()) < GEOMETRY_EPSILON && std::abs((this->_center - this->_point) * (this->_fourth - this->_third) - (this->_center - this->_point).length() * (this->_fourth - this->_third).length()) < GEOMETRY_EPSILON;
 }
 
 bool geometry::StraightQuadrilateralPrism::isRectangularParallelepiped() const {

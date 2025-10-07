@@ -18,6 +18,8 @@ public:
     StraightTrianglePrism(const geometry::Point& center, const geometry::Point& second, const geometry::Point& third, double h): Cylinder(center, second, h), _third(third) {}
     StraightTrianglePrism(const StraightTrianglePrism& straightTrianglePrism): Cylinder(straightTrianglePrism._center, straightTrianglePrism._point, straightTrianglePrism._h), _third(straightTrianglePrism._third) {}
 
+    constexpr geometry::StraightTrianglePrism& operator=(const geometry::StraightTrianglePrism&) = default;
+
     const geometry::Point& getThird() const;
     void setThird(const geometry::Point& third);
     

@@ -18,6 +18,8 @@ public:
     Cylinder(const geometry::Point& center, const geometry::Point& point, double h): _center(center), _point(point), _h(h) {}
     Cylinder(const Cylinder& cylinder): _center(cylinder._center), _point(cylinder._point), _h(cylinder._h) {}
 
+    constexpr geometry::Cylinder& operator=(const geometry::Cylinder&) = default;
+
     const geometry::Point& getCenter() const;
     const geometry::Point& getPoint() const;
     double getHeight() const;
